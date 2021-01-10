@@ -4,6 +4,7 @@ import './index.css';
 import Backprop from './App';
 import reportWebVitals from './reportWebVitals';
 import Adaline from './Adaline'
+import Perceptron from './Perceptron';
 import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
 function Main()
 {
@@ -17,13 +18,19 @@ function Main()
           <li>
             <Link to="/adaline">Adaline Simulator</Link>
           </li>
+          <li>
+            <Link to="/perceptron">Perceptron Simulator</Link>
+          </li>
         </nav>
         <Switch>
           <Route path="/backprop">
           <Backprop initialWeight={0.2} arch={[2,2,2,1]} epochs={1} learningRate={0.2} trainData = {[[0,0,1],[0,1,0],[1,0,0],[1,1,1]]} />
           </Route>
           <Route path="/adaline">
-          <Adaline initialWeight={0.2} epochs={1} learningRate={0.2} trainData = {[[0,0,0],[0,1,0],[1,0,0],[1,1,1]]}/>
+          <Adaline/>
+          </Route>
+          <Route path="/perceptron">
+          <Perceptron/>
           </Route>
         </Switch>
       </div>   
