@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Backprop from './App';
+import Backprop from './Backprop';
 import reportWebVitals from './reportWebVitals';
 import Adaline from './Adaline'
 import Perceptron from './Perceptron';
@@ -24,7 +24,7 @@ function Main()
         </nav>
         <Switch>
           <Route path="/backprop">
-          <Backprop initialWeight={0.2} arch={[2,2,2,1]} epochs={1} learningRate={0.2} trainData = {[[0,0,1],[0,1,0],[1,0,0],[1,1,1]]} />
+          <Backprop initialWeight={0.2} arch={[2,2,2,1]} epochs={1} learningRate={0.2} trainData = {[[0,0,1],[0,1,0],[1,0,0],[1,1,1]]} momentum={0} />
           </Route>
           <Route path="/adaline">
           <Adaline/>
