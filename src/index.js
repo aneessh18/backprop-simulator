@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Corpus from './components/Corpus';
 import './index.css';
-import Backprop from './Backprop';
+import Backprop from './components/Backprop';
 import reportWebVitals from './reportWebVitals';
-import Adaline from './Adaline'
-import Perceptron from './Perceptron';
+import Adaline from './components/Adaline'
+import Perceptron from './components/Perceptron';
 import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
 function Main()
 {
@@ -21,17 +22,29 @@ function Main()
           <li>
             <Link to="/perceptron">Perceptron Simulator</Link>
           </li>
+          <li>
+          <Link to="/corpuscalculator">Corpus Calculator</Link>
+          </li>
         </nav>
         <Switch>
           <Route path="/backprop">
-          <Backprop initialWeight={0.2} arch={[2,2,2,1]} epochs={1} learningRate={0.2} trainData = {[[0,0,1],[0,1,0],[1,0,0],[1,1,1]]} momentum={0} />
+            <Backprop initialWeight={0.2} arch={[2,2,2,1]} epochs={1} learningRate={0.2} trainData = {[[0,0,1],[0,1,0],[1,0,0],[1,1,1]]} momentum={0} />
           </Route>
           <Route path="/adaline">
-          <Adaline/>
+            <Adaline/>
           </Route>
           <Route path="/perceptron">
-          <Perceptron/>
+            <Perceptron/>
           </Route>
+          <Route path="/corpuscalculator">
+            <Corpus 
+              retirementYear = {2046}
+              durationAfterPostRetirement = {20}
+              riskRate = {5}
+              consumptionPerYear = {600000}
+              currentYear= {2021}
+            />
+          </Route>  
         </Switch>
       </div>   
     </Router>
