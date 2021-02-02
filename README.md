@@ -7,3 +7,5 @@ Adaline Simulator
 The weights are updated in a stochastic manner 
 
 Perceptron Simulator
+
+Corpus Calculator
