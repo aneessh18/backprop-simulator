@@ -29,6 +29,7 @@ function Main()
           <li>
             <Link to="/collaborate">write docs together</Link>
           </li>
+      
         </nav>
         <Switch>
           <Route path="/backprop">
@@ -75,6 +76,7 @@ including gender bias, with the majority of editors being male.[4] Edit-a-thons 
    absence of commercial bias.[4] In 2018, Facebook and YouTube announced that they would help
     users detect fake news by suggesting links to related Wikipedia articles.[12]`}/>
           </Route>
+
         </Switch>
       </div>   
     </Router>
